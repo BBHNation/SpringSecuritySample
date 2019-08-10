@@ -1,6 +1,7 @@
 package Thoughtworks.UserAuth.Entities;
 
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -14,6 +15,7 @@ import javax.validation.constraints.Size;
 @Table(name = "USER")
 @Getter
 @Setter
+@NoArgsConstructor
 public class User {
 
     @Id
