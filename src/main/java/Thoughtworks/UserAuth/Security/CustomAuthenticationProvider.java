@@ -29,7 +29,6 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
         if (user.isPresent()) {
             if (passwordEncoder.matches(passWord, user.get().getPassCode())) {
                 ArrayList<GrantedAuthority> grantedAuthorities = new ArrayList<>();
-                grantedAuthorities.add(new GrantedAuthorityImp("ROLE_USER"));
                 grantedAuthorities.add(new GrantedAuthorityImp("USER_RW"));
                 return new UsernamePasswordAuthenticationToken(userName, passWord, grantedAuthorities);
             } else {
