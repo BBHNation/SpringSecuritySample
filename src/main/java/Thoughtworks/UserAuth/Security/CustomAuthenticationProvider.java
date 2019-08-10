@@ -23,6 +23,7 @@ public class CustomAuthenticationProvider implements AuthenticationProvider {
 
     @Override
     public Authentication authenticate(Authentication authentication) throws AuthenticationException {
+        System.out.println("2");
         String userName = authentication.getName();
         String passWord = authentication.getCredentials().toString();
         Optional<User> user = userRepository.findByName(userName);
